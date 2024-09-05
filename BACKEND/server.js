@@ -3,12 +3,15 @@ const cors = require('cors');
 const routes = require('./route');
 const dotenv = require('dotenv').config();
 const app = express();
+const connectToDb = require("./DBconnection")
+
 
 const port = process.env.PORT || 4000;
 console.log('port: ', port);
 
 app.use(express.json());
 app.use(cors());
+connectToDb()
 
 app.use('/api', routes);
 
