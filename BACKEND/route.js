@@ -6,11 +6,11 @@ router.get('/test', (req, res) => {
     res.json({ message: 'This is a test route' });
 });
 
-// router.get('/task/:id',getTaskById);
-// router.get('/task',getAllTask)
+router.get('/task/:id',getTaskById);
+router.get('/task',getAllTask)
 
-// router.post('/task', createtask); 
-// router.put('/task/:id',updatetask);
-// router.delete('/task/:id',deleteById)
+router.post('/task', createtask); 
+router.put('/task/:id',updatetask);
+router.delete('/task/:id',deleteById)
 
 module.exports = router;
